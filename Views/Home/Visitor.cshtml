@@ -1,0 +1,18 @@
+﻿@model UserAtSite
+
+<div class=" my-5 text-center ">
+    <h1 class="display-4 fw-bold text-center px-4 ">@Model.Name</h1>
+
+    <div class="container px-5">
+        @{
+            if (Model.MainPicture != null)
+            {
+                <img src="@Model.MainPicture" class="img-fluid border rounded-3 shadow-lg mb-4" width="200" height="500" loading="lazy">
+            }
+            else
+            {
+                <img src="~/assets/img/default.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" width="200" height="500" loading="lazy">
+            }
+        }
+    </div>
+</div>

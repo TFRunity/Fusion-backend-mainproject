@@ -1,0 +1,13 @@
+﻿@model AddPictureViewModel
+<form asp-action="AddPicture" asp-controller="Moderator" asp-antiforgery="true" method="post">
+    <div>
+        <label asp-for="Url">Основной путь к фотографии</label>
+        <input asp-for="Url" />
+        <span asp-validation-for="Url"></span>
+    </div>
+    <div>
+        <h3>@Model.Email</h3>
+        <input asp-for="Email" type="hidden" />
+    </div>
+    <button type="submit" value="Save"><h4>Сохранить фотографию</h4></button>
+</form>

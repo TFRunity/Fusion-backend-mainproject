@@ -1,0 +1,36 @@
+﻿@model List<User>
+    <div>
+        @{
+            foreach(User user in Model)
+            {
+                <div>
+                    <h2>@user.UserName</h2>
+                    <h3>@user.Year</h3>
+                    <img href="@user.MainPicture" />
+                    <h3>@user.Description</h3>
+                    <h3>@user.FutureJob</h3>
+                    <h3>
+                        <a href="@Url.Action("EditUser", "Moderator", user)">Edit</a>
+                    </h3>
+                    <h3>
+                        <a href="@Url.Action("Delete", "Moderator", user)">Delete</a>
+                    </h3>
+                    <div>
+                        <div>
+                            <a href="@Url.Action("UsersPictures", "Moderator", new { email = user.Email})"><h3>Панель управления фотографиями</h3></a>
+                        </div>
+                    </div>
+                </div>
+                @if (user.UsersPictures != null) {
+                   @foreach (UsersPicture usersPicture in user.UsersPictures)
+                        {
+                        <div>
+                            <img src="@usersPicture.URL" width="100" height="200"/>
+                            <h2>абоба</h2>
+                        </div>
+                        } 
+                    }
+                }
+            }
+                
+    </div>

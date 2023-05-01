@@ -1,0 +1,62 @@
+﻿@model User
+    @{ 
+        User user = Model;
+    }
+<div>
+    <h2>@user.UserName</h2>
+</div>
+<div>
+    <h2>@user.FutureJob</h2>
+</div>
+<div>
+    <h2>@user.Year</h2>
+</div>
+<div>
+    <h2>@user.Description</h2>
+</div>
+<div>
+    <h4>Фоточки человека</h4>
+    @{
+        if (user.UsersPictures != null)
+        {
+            @foreach (UsersPicture picture in user.UsersPictures)
+            {
+                <div>
+                    <img src="@picture.URL" />
+                    <a href="@Url.Action("DeletePicture", "Moderator", new { Id = picture.Id})">Удалить эту фотографию</a>
+                </div>
+            }
+        }
+    }
+</div>
+<div>
+    <a href="@Url.Action("AddPicture", "Moderator", new { email = Model.Email } )">Добавить фотографию</a>
+</div>
+<form method="post" asp-action="EditedUser" asp-controller="Moderator">
+    <div>
+        <h2>Поменяйте имя</h2>
+        <label asp-for="UserName"></label>
+        <input asp-for="UserName" />
+    </div>
+    <div>
+        <h2>Поменяйте описание</h2>
+        <label asp-for="Description"></label>
+        <input asp-for="Description" />
+    </div>
+    <div>
+        <h2>Поменяйте описание</h2>
+        <label asp-for="FutureJob"></label>
+        <input asp-for="FutureJob" />
+    </div>
+    <div>
+        <h2>Поменяйте описание</h2>
+        <label asp-for="Year"></label>
+        <input asp-for="Year" />
+    </div>
+    <div>
+        <h2>Поменяйте почту</h2>
+        <label asp-for="Email"></label>
+        <input asp-for="Email" />
+    </div>
+    <input type="submit" value="Save" />
+</form>

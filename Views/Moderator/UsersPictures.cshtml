@@ -1,0 +1,25 @@
+﻿@model List<UsersPicture>
+@{ 
+    int i = 0;
+}
+@{ 
+    <div>
+        @{
+            if (Model != null)
+            {
+                @foreach (UsersPicture picture in Model)
+                {
+                    i++;
+                    <img src="@picture.URL" />
+                    <h1>Картинка номер @i</h1>
+                }
+            }
+            else
+            {
+                <a href="@Url.Action("List", "Moderator")"><h2>Картинок нету, нельзя их вывести.
+                        Попробуй добавить их </h2></a>
+            }
+        }
+    </div>
+    
+}

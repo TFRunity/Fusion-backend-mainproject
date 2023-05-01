@@ -1,0 +1,173 @@
+﻿body {
+    margin: 0px;
+    padding: 0px;
+    direction: ltr;
+    min-width: 1024px;
+    height: 100%;
+    overflow: auto;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    line-height: 1.4;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 400;
+    background: rgb(255, 255, 255);
+    -webkit-font-smoothing: antialiased;
+    font-variant-ligatures: no-common-ligatures;
+}
+* {
+    box-sizing: border-box;
+}
+
+.log-in-out-background {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(40deg, rgb(237, 106, 8, 0.7),rgb(207, 11, 11, 0.7)), url(https://abrakadabra.fun/uploads/posts/2022-03/1647009855_2-abrakadabra-fun-p-fon-linoleum-2.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.form-center-box {
+    width: 90%;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 50px 60px 70px;
+    text-align: center;
+}
+.form-center-box h1 {
+    font-size: 30px;
+    margin-bottom: 60px;
+    color: orangered;
+    position: relative;
+}
+.form-center-box h1::after {
+    content: "";
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
+    background-color: orangered;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.input-field {
+    background: #eaeaea;
+    margin: 15px 0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+input {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 15px 12px;
+}
+.input-field i {
+    margin: 12px;
+    color: #999;
+}
+form p a {
+    text-decoration: none;
+    color: orangered;
+}
+.btn-field {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.btn-field input {
+    text-align: center;
+    background-color: orangered;
+    color: #fff;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: all 0.5s ease 0.1s;
+}
+.btn-field input:hover {
+    background-color: #f6b721;
+}
+img.rot {
+    animation: 2s linear 0.3s normal none infinite running rot;
+    -webkit-animation: 2s linear 0.3s normal none infinite running rot;
+    height: 70vmin;
+    padding: 50px;
+    pointer-events: none;
+}
+
+@keyframes rot {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes rot {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.img-header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+.header {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 24px 0px 16px;
+    z-index: 100;
+    width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+    .header left {
+        display: flex;
+    }
+    .header right {
+        display: flex;
+        column-gap: 32px;
+        -webkit-box-align: center;
+        align-items: center;
+    }
+.header .left > :nth-child(n) {
+    margin-right: 40px;
+}
+.fiGpxA {
+    display: block;
+    width: 250px;
+    font-size: 0px;
+    line-height: 0;
+    font-style: normal;
+    text-decoration: none;
+}
+.font-family-text {
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    font-family: Dodo, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 600;
+}
+.color-orangered {
+    color: orangered;
+}

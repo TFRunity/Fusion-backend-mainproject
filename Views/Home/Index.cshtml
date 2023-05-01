@@ -1,0 +1,25 @@
+﻿@model List<UserAtSite>
+<div class="flex-container-items">
+                @{ foreach (UserAtSite user in Model)
+                    {
+                         <div class="flex-item">
+                                @{ 
+                                    if(user.MainPicture != null)
+                                    {
+                                        <a asp-action="Visitor" asp-controller="Home" asp-route-name="@user.Name"><img class="img-fluid" src="@user.MainPicture" /></a>
+                                    }
+                                    else
+                                    {
+                                        //Сделать страницу с каждым отдельным человеком
+                                        <a asp-action="Visitor" asp-controller="Home" asp-route-name="@user.Name"><img class="img-fluid"  src="~/assets/img/default.jpg" /></a>
+                                    }
+                                }
+                         </div>
+                    }
+                }
+</div>
+<a asp-controller="Account" asp-action="AdminArea">
+    <h4>
+        Панель для администрации
+    </h4>
+</a>
